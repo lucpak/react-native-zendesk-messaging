@@ -88,12 +88,7 @@
     "android": "2.13.0",
     "ios": "2.13.0"
   },
-  "packageManager": "yarn@4.6.0",
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
+
   "release-it": {
     "git": {
       "commitMessage": "chore: release ${version}",

@@ -19,13 +19,13 @@ Pod::Spec.new do |s|
   # Disable bitcode globally
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
   
-  if defined?($ZendeskSDKVersion)
-    Pod::UI.puts "#{s.name}: Using user specified Zendesk messaging SDK version '#{$ZendeskSDKVersion}'"
-    sdk_version = $ZendeskSDKVersion
-  end
+  # if defined?($ZendeskSDKVersion)
+  #   Pod::UI.puts "#{s.name}: Using user specified Zendesk messaging SDK version '#{$ZendeskSDKVersion}'"
+  #   sdk_version = $ZendeskSDKVersion
+  # end
 
   s.dependency "React-Core"
-  s.dependency "ZendeskSDKMessaging", sdk_version
+  s.dependency "ZendeskSDKMessaging"
 
   if ENV['RCT_NEW_ARCH_ENABLED'] == '1' then
     s.compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 -Wno-comma -Wno-shorten-64-to-32 -DRCT_NEW_ARCH_ENABLED=1'
